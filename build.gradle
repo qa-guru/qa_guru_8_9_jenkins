@@ -67,3 +67,18 @@ task many_tags_tests(type: Test) {
         excludeTags "prod"
     }
 }
+
+task empty_tests(type: Test) {
+    useJUnitPlatform {
+        includeTags "empty"
+    }
+}
+/*
+java  \
+"-DprojectName=PROJECT_NAME" \
+"-Denv=ENVIRONMENT" \
+"-DreportLink=BUILD_URL" \
+"-Dcomm=Any comment here" \
+"-Dconfig.file=src/test/resources/notifications/telegram.json" \
+-jar allure-notifications-3.1.2.jar
+ */
